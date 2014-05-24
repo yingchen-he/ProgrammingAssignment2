@@ -40,3 +40,11 @@ cacheSolve <- function(x, ...) {
       x$setinv(xinv)
       xinv
 }
+
+
+###### To test the functions:
+x<-makeCacheMatrix()
+a<-matrix(c(1,3,2,4),ncol=2)
+x$set(a) # set the value of the matrix
+cacheSolve(x) # The inverse hasn't been cached yet, so the function solves and stores the inverse.
+cacheSolve(x) # This time, the function just gets the cached data.
